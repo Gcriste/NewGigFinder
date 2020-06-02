@@ -23,3 +23,4 @@
 // 	dialect: 'mysql',
 // 	logging: false
 // }
+// }
