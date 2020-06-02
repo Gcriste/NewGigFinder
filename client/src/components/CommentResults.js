@@ -24,9 +24,7 @@ const CommentResults = (props) => {
 												<Moment date={savedDiscussion.date} format='MM/DD/YYYY hh:mm' />
 											</p> */}
 							</div>
-						</div>
-                        <hr></hr>
-						</div>
+						
                         <li className='search-list list-group-item'>
 						<div className='row'> 
 							<div className='savedDiscussionInfo'>
@@ -45,10 +43,10 @@ const CommentResults = (props) => {
                                  <p>{comment.text}</p>
                                  <p><Moment date={comment.date} format="MM/DD/YYYY hh:mm"/></p>
                                  </div>
-                                 </div>
+                                 
                                  
 						<button
-									className='ui red vertical animated button'
+                                    className='ui red vertical animated button'
 									tabindex='0'
 									id={comment.id}
 									onClick={() => props.handleDeleteComment(comment.id)}
@@ -56,15 +54,19 @@ const CommentResults = (props) => {
 									<div className='visible content'>Delete Comment</div>
 									<div className='hidden content'>DELETE</div>
 								</button> 
+                                </div>
                           
                    
                     </>
                     )
                 })}
-                      </div>
-						 </div>
-                 </li>
-				</div>
+                                        </div>
+						            </div>
+                                </li>
+                             </div>
+                            <hr></hr>
+					    </div>
+				    </div>
                 </div>
 			</div>
 		</div>

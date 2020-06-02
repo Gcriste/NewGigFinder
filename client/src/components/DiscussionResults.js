@@ -33,28 +33,29 @@ const DiscussionResults = (props) => {
 												<p>
 													<Moment date={discussion.date} format='MM/DD/YYYY hh:mm' />
 												</p>
+
+												<Link
+													to={'/comment/' + discussion.id}
+													className='ui primary animated button'
+													tabindex='0'
+												>
+													<div className='visible content'>Comment </div>
+													<div className='hidden content'>
+														<i className='right arrow icon' />
+													</div>
+												</Link>
+
+												<button
+													className='ui red vertical animated button'
+													tabindex='0'
+													id={discussion.id}
+													onClick={() => props.handleDeleteDiscussion(discussion.id)}
+												>
+													<div className='visible content'>Delete Post </div>
+													<div className='hidden content'>DELETE</div>
+												</button>
 											</div>
 										</div>
-										<Link
-											to={'/comment/' + discussion.id}
-											className='ui primary animated button'
-											tabindex='0'
-										>
-											<div className='visible content'>Comment </div>
-											<div className='hidden content'>
-												<i className='right arrow icon' />
-											</div>
-										</Link>
-
-										<button
-											className='ui red vertical animated button'
-											tabindex='0'
-											id={discussion.id}
-											onClick={() => props.handleDeleteDiscussion(discussion.id)}
-										>
-											<div className='visible content'>Delete Post </div>
-											<div className='hidden content'>DELETE</div>
-										</button>
 
 										{/* {discussion.comments.map(comment => {
                                    if(comment.text){
