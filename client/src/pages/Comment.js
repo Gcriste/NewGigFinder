@@ -140,38 +140,40 @@ class Comment extends Component {
 
 		return (
 			<div className='container'>
-				<button className='btn btn-danger' onClick={this.handleLogout}>
-					Logout
-				</button>
-				<div className='ui relaxed center aligned grid'>
-					<div className='ten wide column'>
-						<h1>Comment On This Post</h1>
-						<form className='ui big form'>
-							<div className='card'>
-								<div className='card-body player'>
-									<div className='article'>
-										<CommentResults
-											savedDiscussions={this.state.savedDiscussions}
-											comments={this.state.comments}
-											handleDeleteComment={this.handleDeleteComment}
-										/>
-										<br />
-										<PostComment handlePostSubmit={this.handlePostSubmit} />
-
-										<hr />
-										<div className={`sixteen wide field ${errors.text ? 'error' : ''}`}>
-											{errors.text && <div style={styles.error}>{errors.text}</div>}
-											<InputBox
-												value={this.state.text}
-												onChange={this.handlePostChange}
-												name='text'
-												placeholder='Type Your Discussion Here'
+				<div className='card'>
+					<button className='btn btn-danger' style={{ width: '5rem' }} onClick={this.handleLogout}>
+						Logout
+					</button>
+					<div className='ui relaxed center aligned grid'>
+						<div className='fourteen wide column'>
+							<h1>Comment On This Post</h1>
+							<form className='ui big form'>
+								<div className='card'>
+									<div className='card-body player'>
+										<div className='article'>
+											<CommentResults
+												savedDiscussions={this.state.savedDiscussions}
+												comments={this.state.comments}
+												handleDeleteComment={this.handleDeleteComment}
 											/>
+											<br />
+											<PostComment handlePostSubmit={this.handlePostSubmit} />
+
+											<hr />
+											<div className={`sixteen wide field ${errors.text ? 'error' : ''}`}>
+												{errors.text && <div style={styles.error}>{errors.text}</div>}
+												<InputBox
+													value={this.state.text}
+													onChange={this.handlePostChange}
+													name='text'
+													placeholder='Type Your Discussion Here'
+												/>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</form>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

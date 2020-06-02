@@ -8,10 +8,14 @@ const CommentResults = (props) => {
 			<div className='card-body player'>
 				<div className='article'>
                     <div className="container">
-					<li className='search-list list-group-item'>
+					
 						<div className='row' id={props.savedDiscussions.userid} key={props.savedDiscussions.id}>
 						<div className='card' >
-							<img src={props.savedDiscussions.avatar} />
+							<img style={{display: 'block',
+										marginLeft: 'auto',
+										marginRight: 'auto',
+                                        width: '12rem'}}
+                                src={props.savedDiscussions.avatar}  />
 							<div className='container'>
 								<h2>{props.savedDiscussions.name}</h2>
 								<p className='savedDiscussionMusician'>{props.savedDiscussions.text}</p>
@@ -23,15 +27,19 @@ const CommentResults = (props) => {
 						</div>
                         <hr></hr>
 						</div>
-                       
+                        <li className='search-list list-group-item'>
 						<div className='row'> 
 							<div className='savedDiscussionInfo'>
 								{props.comments.map((comment) => {
                                      return (
                                         <>
 
-                                      <div className="card" style={{width:'18rem'}}>
-                                      <img src={comment.avatar}></img>
+                                      <div className="card" style={{width:'50rem'}}>
+                                      <img style={{display: 'block',
+										marginLeft: 'auto',
+										marginRight: 'auto',
+                                        width: '12rem'}}
+                                        src={comment.avatar}></img>
                                       <div className="container">
                                  <h2>{comment.name}</h2> 
                                  <p>{comment.text}</p>

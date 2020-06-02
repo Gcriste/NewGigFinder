@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import IncomingRequests from '../components/IncomingRequest';
 import setAuthToken from '../utils/SetAuthToken';
@@ -9,7 +10,8 @@ class IncomingRequest extends Component {
 		userid: '',
 		savedRequests: [],
 		gigid: '',
-		dateForSavedRequests: []
+		dateForSavedRequests: [],
+		redirect: false
 	};
 
 	componentDidMount() {
@@ -82,16 +84,25 @@ class IncomingRequest extends Component {
 	};
 
 	render() {
+		const { redirect, errors } = this.state;
+		if (redirect) {
+			return <Redirect to='/' />;
+		}
 		return (
 			<div className='container'>
-				<button className='btn btn-danger' onClick={this.handleLogout}>
-					Logout
-				</button>
-				<IncomingRequests
-					savedRequests={this.state.savedRequests}
-					dateForSavedRequests={this.state.dateForSavedRequests}
-					handleDeleteButton={this.handleDeleteButton}
-				/>
+				<div className='card'>
+					<button className='btn btn-danger' style={{ width: '5rem' }} onClick={this.handleLogout}>
+						Logout
+					</button>
+					<br />
+					<div>
+						<IncomingRequests
+							savedRequests={this.state.savedRequests}
+							dateForSavedRequests={this.state.dateForSavedRequests}
+							handleDeleteButton={this.handleDeleteButton}
+						/>
+					</div>
+				</div>
 			</div>
 		);
 	}

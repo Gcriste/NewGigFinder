@@ -127,39 +127,41 @@ class DiscussionBoard extends Component {
 
 		return (
 			<div className='container'>
-				<button className='btn btn-danger' onClick={this.handleLogout}>
-					Logout
-				</button>
-				<div className='ui relaxed center aligned grid'>
-					<div className='ten wide column'>
-						<h1>Discussions</h1>
-						<form className='ui big form'>
-							<div className='card'>
-								<div className='card-body player'>
-									<div className='article'>
-										<div className={`sixteen wide field ${errors.text ? 'error' : ''}`}>
-											{errors.text && <div style={styles.error}>{errors.text}</div>}
-											<Input
-												value={this.state.text}
-												onChange={this.handlePostChange}
-												name='text'
-												placeholder='Type Your Discussion Here'
-											/>
+				<div className='card'>
+					<button className='btn btn-danger' style={{ width: '5rem' }} onClick={this.handleLogout}>
+						Logout
+					</button>
+					<div className='ui relaxed center aligned grid'>
+						<div className='fourteen wide column'>
+							<h1>Discussions</h1>
+							<form className='ui big form'>
+								<div className='card'>
+									<div className='card-body player'>
+										<div className='article'>
+											<div className={`sixteen wide field ${errors.text ? 'error' : ''}`}>
+												{errors.text && <div style={styles.error}>{errors.text}</div>}
+												<Input
+													value={this.state.text}
+													onChange={this.handlePostChange}
+													name='text'
+													placeholder='Type Your Discussion Here'
+												/>
 
-											<PostButton handlePostSubmit={this.handlePostSubmit} />
-										</div>
-										<div className='sixteen wide field'>
-											<DiscussionResults
-												discussions={this.state.discussions}
-												handleDeleteDiscussion={this.handleDeleteDiscussion}
-												user={this.state.user}
-												// handleCommentButton = {this.handleCommentButton}
-											/>
+												<PostButton handlePostSubmit={this.handlePostSubmit} />
+											</div>
+											<div className='sixteen wide field'>
+												<DiscussionResults
+													discussions={this.state.discussions}
+													handleDeleteDiscussion={this.handleDeleteDiscussion}
+													user={this.state.user}
+													// handleCommentButton = {this.handleCommentButton}
+												/>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</form>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

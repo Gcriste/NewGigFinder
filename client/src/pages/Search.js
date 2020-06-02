@@ -54,12 +54,14 @@ class SearchGigs extends Component {
 
 		return (
 			<div className='container'>
-				<button className='btn btn-danger' onClick={this.handleLogout}>
-					Logout
-				</button>
-				<br />
-				<div>
-					<SearchResult gigs={this.state.gigs} />
+				<div className='card'>
+					<button className='btn btn-danger' style={{ width: '5rem' }} onClick={this.handleLogout}>
+						Logout
+					</button>
+					<br />
+					<div>
+						<SearchResult gigs={this.state.gigs} />
+					</div>
 				</div>
 			</div>
 		);

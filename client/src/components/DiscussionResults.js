@@ -17,8 +17,16 @@ const DiscussionResults = (props) => {
 							<li className='search-list list-group-item'>
 								<div className='SearchResult row' id={discussion.userid} key={discussion.id}>
 									<div>
-										<div className='card discussion-post'>
-											<img src={discussion.avatar} style={{ width: '18rem' }} />
+										<div className='card discussion-post' style={{ width: '50rem' }}>
+											<img
+												style={{
+													display: 'block',
+													marginLeft: 'auto',
+													marginRight: 'auto',
+													width: '12rem'
+												}}
+												src={discussion.avatar}
+											/>
 											<div className='container'>
 												<h2 className='discussionMusician'>{discussion.name}</h2>
 												<p>{discussion.text}</p>
@@ -47,7 +55,7 @@ const DiscussionResults = (props) => {
 											<div className='visible content'>Delete Post </div>
 											<div className='hidden content'>DELETE</div>
 										</button>
-										<hr />
+
 										{/* {discussion.comments.map(comment => {
                                    if(comment.text){
                                      return (
