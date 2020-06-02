@@ -17,7 +17,7 @@ const DiscussionResults = (props) => {
 							<li className='search-list list-group-item'>
 								<div className='SearchResult row' id={discussion.userid} key={discussion.id}>
 									<div>
-										<div className='card discussion-post' style={{ width: '50rem' }}>
+										<div className='discussion-post' style={{ width: '50rem' }}>
 											<img
 												style={{
 													display: 'block',

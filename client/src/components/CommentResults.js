@@ -14,7 +14,7 @@ const CommentResults = (props) => {
 							<img style={{display: 'block',
 										marginLeft: 'auto',
 										marginRight: 'auto',
-                                        width: '12rem'}}
+										width: '12rem'}}
                                 src={props.savedDiscussions.avatar}  />
 							<div className='container'>
 								<h2>{props.savedDiscussions.name}</h2>
@@ -24,7 +24,7 @@ const CommentResults = (props) => {
 												<Moment date={savedDiscussion.date} format='MM/DD/YYYY hh:mm' />
 											</p> */}
 							</div>
-						
+							</div>
                         <li className='search-list list-group-item'>
 						<div className='row'> 
 							<div className='savedDiscussionInfo'>
@@ -32,7 +32,7 @@ const CommentResults = (props) => {
                                      return (
                                         <>
 
-                                      <div className="card" style={{width:'50rem'}}>
+                                      <div className='card' style={{width:'50rem', marginLeft:'auto', marginRight:'auto'}}>
                                       <img style={{display: 'block',
 										marginLeft: 'auto',
 										marginRight: 'auto',
@@ -63,8 +63,8 @@ const CommentResults = (props) => {
                                         </div>
 						            </div>
                                 </li>
-                             </div>
-                            <hr></hr>
+                             
+                     
 					    </div>
 				    </div>
                 </div>

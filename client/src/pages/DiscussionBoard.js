@@ -124,7 +124,6 @@ class DiscussionBoard extends Component {
 		if (redirect) {
 			return <Redirect to='/' />;
 		}
-
 		return (
 			<div className='container'>
 				<div className='card'>
