@@ -11,6 +11,7 @@ Search shows- can search all shows
 Fill out request- after you click on a show you can fill out request
         -request form contains name, age, phone number, experience (in years), reference, and link(video of them playing)
 Post a show- form contains date, venue, time, pay, band name, music type
+Discussion Board- users can post discussions and other users can comment on them
 
 Once a show is posted it is added to all shows Available
 Once a request is made, the user(who posted the show) is notified
@@ -21,7 +22,7 @@ Once a request is made, the user(who posted the show) is notified
 
 
 ## Technologies Used:
--Javascsript, Reactjs, Nodejs, Semantic UI, Bootstrap, CSS, ES6, MySQL, Express
+-Javascsript, Reactjs, Nodejs, Semantic UI, Bootstrap, CSS, ES6, MySQL, Express, Gravatar
 
 ## Creator
 -I am the sole creator and owner. @GriffinCriste
