@@ -1,5 +1,5 @@
 Depoyable Link:
-https://gcriste-musicianapp.herokuapp.com/
+https://newgigfinder.herokuapp.com/
 
 ## A must log in/ create an account
 ## Once a user is logged in they can can search shows from the database, post a show, or request to play an existing show
